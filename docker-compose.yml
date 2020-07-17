@@ -1,0 +1,17 @@
+version: "3"
+services:
+  app:
+    container_name: node-mongo
+    restart: always
+    build: .
+    ports:
+      - "3333:3333"
+    depends_on:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - "./data/db:/data/db"
+    ports:
+      - "27017:27017"
