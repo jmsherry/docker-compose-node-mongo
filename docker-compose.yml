@@ -1,17 +1,25 @@
 version: "3"
 services:
+
   app:
     container_name: node-mongo
     restart: always
     build: .
     ports:
       - "3333:3333"
+    expose:
+      - "3333"
     depends_on:
       - mongo
+    command: sh -c "/wait && npm start"
+
   mongo:
     container_name: mongo
+    hostname: mongo
     image: mongo
     volumes:
       - "./data/db:/data/db"
     ports:
       - "27017:27017"
+    expose:
+      - "27017"

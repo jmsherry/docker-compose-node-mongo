@@ -8,9 +8,10 @@ RUN npm install
 
 EXPOSE 3333
 
-# CMD ["npm", "start"]
-RUN chmod +x wait-for-it.sh
+# import wait file and execute
+ENV WAIT_VERSION 2.7.2
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/$WAIT_VERSION/wait /wait
+RUN chmod +x /wait
 
-ENTRYPOINT [ "/bin/bash", "-c" ]
-
-CMD ["./wait-for-it.sh" , "localhost:27107" , "--strict" , "--timeout=300" , "--" , "npm", "start"]
+# Carry on running
+CMD ["npm", "start"]

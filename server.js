@@ -1,6 +1,5 @@
 require("dotenv").config();
 const express = require("express");
-const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 const app = express();
@@ -11,8 +10,8 @@ const {
 // console.log("MONGODB_URI", MONGODB_URI);
 app.use(express.static("public"));
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json()); // parse application/json
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json()); // parse application/json
 
 mongoose.Promise = global.Promise; // You can use different promise libs
 const promise = mongoose.connect(MONGODB_URI, {
