@@ -8,7 +8,7 @@ RUN npm install
 
 EXPOSE 3333
 
-# import wait file and execute
+# import wait script and execute
 ENV WAIT_VERSION 2.7.2
 ADD https://github.com/ufoscout/docker-compose-wait/releases/download/$WAIT_VERSION/wait /wait
 RUN chmod +x /wait

@@ -10,8 +10,8 @@ services:
     expose:
       - "3333"
     depends_on:
-      - mongo
-    command: sh -c "/wait && npm start"
+      - mongo #depends_on only means the container is running, not the db server inside it
+    command: sh -c "/wait && npm start" # so, we use the wait script (see Dockerfile)
 
   mongo:
     container_name: mongo
