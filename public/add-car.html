@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Car</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+  <script src="/scripts/main.js" defer></script>
+</head>
+
+<body>
+  <h1>Add Car</h1>
+  <a href="/">Go Home</a>
+  <form name="addForm">
+    <!-- avatar_url -->
+    <div class="form-row">
+      <label for="avatar_url">Avatar URL</label>
+      <input type="text" id="avatar_url" name="avatar_url" placeholder="A url for a pic of the car">
+    </div>
+
+    <!-- name -->
+    <div class="form-row">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Name of the car">
+    </div>
+
+    <!-- bhp -->
+    <div class="form-row">
+      <label for="bhp">BHP</label>
+      <input type="text" id="bhp" name="bhp" placeholder="The car's bhp">
+    </div>
+
+    <div class="form-row">
+      <button type="reset">Reset</button>
+      <button type="submit">Add Car</button>
+    </div>
+
+  </form>
+</body>
+
+</html>

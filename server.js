@@ -78,8 +78,6 @@ app.delete("/api/v1/cars/:carid", function (req, res) {
   });
 });
 
-// ....Delete and Update go here
-
 app.listen(PORT, function () {
   console.log(`Server is listening on port ${PORT}`);
 });

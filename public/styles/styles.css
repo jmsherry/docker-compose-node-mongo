@@ -1,0 +1,11 @@
+body {
+  background-color: #eee;
+}
+
+.car {
+  display: flex;
+}
+
+.car .avatar {
+  width: 100px
+}
